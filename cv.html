@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Louise Stanley | Portfolio | Web Design</title>
+
+	<meta name="description" content="Welcome to my website, where you will find examples of my work from my Diploma in Web Design course at IBAT College, Dublin.">
+	<meta name="keywords" content="IBAT College, portfolio, website, Louise Stanley">
+	<meta name="author" content="Louise Stanley Portfolio">
+
+	<link rel="stylesheet" href="assets/css/mystyle.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet"> 
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script
+		async src="https://www.googletagmanager.com/gtag/js?id=UA-134853098-1">
+	</script>
+
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-134853098-1');
+	</script>
+</head>
+
+<body>
+	<div class="container-menu-mobile">
+		<img src="assets/img/logo.svg" alt="SKOD logo">
+		<label for="btn-toggle" class="btn-toggle"><span class="icon-open-mobile-menu"></span></label>
+		<input type="checkbox" id="btn-toggle" name="btn-toggle" value="">
+	</div>
+
+	<div class="mobile-menu-options">
+		<ul class="menu-mobile-options-list">
+			<li><a href="../portfolio/portfolio.html">Portfolio</a></li>
+			<li><a href="../portfolio/cv.html">CV</a></li>
+			<li><a href="../portfolio/contact.html" class="btn-ghost btn-rounded">Contact</a></li>
+		</ul>
+	</div>
+
+	<div class="container-menu-desktop">
+		<a href="portfolio.html"><img src="assets/img/logo.svg" alt="SKOD logo" class="img-fluid"></a>
+		<ul>
+			<li><a href="../portfolio/portfolio.html">Portfolio</a></li>
+			<li><a href="../portfolio/cv.html">CV</a></li>
+			<li><a href="../portfolio/contact.html" class="btn-ghost btn-rounded">Contact</a></li>
+		</ul>
+	</div>
+
+	<div class="hero-block-2">
+		<h1 class="tracking-in-expand">What have I been up to?</h1>
+		<h2>Check out my CV <a href="#cv">below</a>.</h2>
+	</div>
+
+	<div class="container-wide">
+		<div class="container">
+		<h4><a name="cv">My CV</a></h4>
+		<p>I am a highly commercial, technically savvy professional with 14+ years experience in design. I adapt quickly and work well in high-pressure environments. I have keen communication skills and am comfortable collaborating with all stakeholders. I am currently developing my front-end and UX skills through IBAT college.</p>
+
+		<h4>Experience</h4>
+		<ul>
+		<li>Brand & Digital Design Specialist, Mentors Ireland (Apr 2019-Present)
+		<li>Brand & Digital Design Specialist, Brightwater (Jan 2019-Present)
+		<li>Assistant Manager, Brightwater (Jul 2018-Present)
+		<li>Multidisciplinary Designer (Freelance), Some Kind of Design (Sep 2011-Jan 2015)
+		<li>Graphic Designer, Print n' Go (Feb 2009-Dec 2011)
+		<li>Graphic Designer, DigiPrint (Aug 2008-Feb 2009
+		<li>Graphic Designer, DNA Design to Print (Aug 2006-Aug 2008)
+		<li>Junior Graphic Designer, DNA Design to Print (May 2004-Aug 2006)
+		</ul>
+
+		<h4>Education</h4>
+		<ul>
+		<li>IBAT College Dublin (2019): Diploma in Web Design
+		<li>Filmbase (2017): Adobe Authorised Training in Premiere Pro CC
+		<li>Pulse College (2017): Adobe Authorised Training in After Effects CC
+		<li>Coláiste Dhúlaigh College of Further Education (2012-2014): Higher National Diploma in Graphic Design
+		<li>Coláiste Dhúlaigh College of Further Education (2011-2012): FETAC Level 5 Foundation in Graphic Design
+		</ul>
+	</div>
+	</div>
+
+<script>
+		window.onscroll = function() {myFunction()};
+		let header = document.querySelector('.container-menu-desktop');
+		var sticky = header.offsetTop;
+		function myFunction() {
+			if (window.pageYOffset > sticky) {
+				header.classList.add("container-menu-desktop-on-scroll");
+			} else {
+				header.classList.remove("container-menu-desktop-on-scroll");
+			}
+		}
+
+		document.querySelector('#btn-toggle').addEventListener('click', classToggle)
+
+		function classToggle() {
+			//toggle icon
+			let elemIcon = document.querySelector('.btn-toggle span');
+			const icon = elemIcon.querySelector('span');
+			//Mobile menu currentyy closed
+			if (elemIcon.classList.contains('icon-open-mobile-menu')) {
+				elemIcon.classList.remove('icon-open-mobile-menu');
+				elemIcon.classList.add('icon-close-mobile-menu');
+				document.querySelector(".mobile-menu-options").style.right = "0";
+				document.querySelector(".page-content").style.marginRight= "320px";
+			}
+			//Mobile menu curently open
+			else {
+				elemIcon.classList.remove('icon-close-mobile-menu');
+				elemIcon.classList.add('icon-open-mobile-menu');
+				document.querySelector(".mobile-menu-options").style.right = "-320px";
+				document.querySelector(".page-content").style.marginRight= "0";
+			}
+		}
+
+	</script>
+
+</body>
+</html>

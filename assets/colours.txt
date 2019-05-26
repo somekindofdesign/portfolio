@@ -1,0 +1,5 @@
+purple: #b22cff
+
+blue: #19dcea
+
+pink: #EE32A4
